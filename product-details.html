@@ -81,19 +81,25 @@
                             <div class="right-bar">
                                 <!-- Search Form -->
                                 <div class="sinlge-bar">
-                                    <a href="favorite.html" class="single-icon"
+                                    <a href="#" class="single-icon"
                                         ><i
                                             class="fa fa-heart-o"
                                             aria-hidden="true"
-                                        ></i
-                                        ><span class="total-count">2</span></a
-                                    >
+                                        ></i>
+                                        <span
+                                            data-store-el="favoriteProductsCounter"
+                                            class="total-count"
+                                        ></span
+                                    ></a>
                                 </div>
                                 <div class="sinlge-bar shopping">
                                     <a href="cart.html" class="single-icon"
                                         ><i class="ti-bag"></i>
-                                        <span class="total-count">2</span></a
-                                    >
+                                        <span
+                                            class="total-count"
+                                            data-store-el="cartItemsCounter"
+                                        ></span
+                                    ></a>
                                 </div>
                             </div>
                         </div>
@@ -166,24 +172,32 @@
                     <div class="col-lg-12 col-12">
                         <div class="blog-single-main">
                             <div class="row">
-                                <div class="col-12">
+                                <div
+                                    class="col-12"
+                                    data-store-el="productDetails"
+                                ></div>
+                                <template
+                                    data-store-el="productDetailsTemplate"
+                                >
                                     <div class="image">
                                         <img
-                                            src="https://via.placeholder.com/950x460"
+                                            data-store-el="itemImage"
                                             alt="#"
                                         />
                                     </div>
                                     <div class="blog-detail">
-                                        <h2 class="blog-title">
-                                            What are the secrets to start- up
-                                            success?
-                                        </h2>
+                                        <h2
+                                            class="blog-title"
+                                            data-store-el="itemTitle"
+                                        ></h2>
                                         <div class="blog-meta">
                                             <span class="author"
-                                                ><a href="#"
+                                                ><a
+                                                    data-store-el="itemAddToCart"
                                                     ><i class="ti-bag"></i>Add
                                                     to card</a
-                                                ><a href="#"
+                                                ><a
+                                                    data-store-el="itemToggleFavorite"
                                                     ><i
                                                         class="fa fa-heart-o"
                                                         aria-hidden="true"
@@ -193,31 +207,22 @@
                                             >
                                         </div>
                                         <div class="content">
-                                            <p>
-                                                What a crazy time. I have five
-                                                children in colleghigh school
-                                                graduates.jpge or pursing post
-                                                graduate studies Each of my
-                                                children attends college far
-                                                from home, the closest of which
-                                                is more than 800 miles away.
-                                                While I miss being with my older
-                                                children, I know that a college
-                                                experience can be the source of
-                                                great growth and experience can
-                                                be the source of source of great
-                                                growth and can provide them with
-                                                even greater in future.
-                                            </p>
+                                            <p
+                                                data-store-el="itemDescription"
+                                            ></p>
                                         </div>
                                         <div
                                             class="product-price mt-5"
                                             style="font-size: 25px"
                                         >
-                                            <span>Price $50.00</span>
+                                            <span
+                                                >Price $<span
+                                                    data-store-el="itemPrice"
+                                                ></span
+                                            ></span>
                                         </div>
                                     </div>
-                                </div>
+                                </template>
                             </div>
                         </div>
                     </div>
@@ -497,5 +502,8 @@
         <script src="js/easing.js"></script>
         <!-- Active JS -->
         <script src="js/active.js"></script>
+
+        <script src="js/store.js"></script>
+        <script src="products.js"></script>
     </body>
 </html>

@@ -26,6 +26,7 @@ function initStore(products) {
         cartItemIncrementCount: 'cartItemIncrementCount',
         cartItemDecrementCount: 'cartItemDecrementCount',
         cartItemRemove: 'cartItemRemove',
+        cartEmptyDisabled: 'cartEmptyDisabled',
 
         itemImage: 'itemImage',
         itemTitle: 'itemTitle',
@@ -33,6 +34,7 @@ function initStore(products) {
         itemPrice: 'itemPrice',
         itemToggleFavorite: 'itemToggleFavorite',
         itemAddToCart: 'itemAddToCart',
+        itemLink: 'itemLink',
 
         productDetails: 'productDetails',
         productDetailsTemplate: 'productDetailsTemplate',
@@ -253,6 +255,11 @@ function initStore(products) {
             cartTotalEl.textContent = getCartTotal();
         }
 
+        const cartEmptyDisabled = queryEl(ELEMENTS.cartEmptyDisabled);
+        if (cartEmptyDisabled && !state.cartItems.length) {
+            cartEmptyDisabled.disabled = true;
+        }
+
         const cartEl = queryEl(ELEMENTS.cartItems);
         const cartItemTemplateEl = queryEl(ELEMENTS.cartItemTemplate);
 
@@ -361,6 +368,11 @@ function initStore(products) {
             element,
         );
         const itemAddToCart = queryEl(ELEMENTS.itemAddToCart, element);
+        const itemLink = queryEl(ELEMENTS.itemLink, element);
+
+        if (itemLink) {
+            itemLink.href = `/product-details.html?productId=${product.id}`;
+        }
 
         if (imageItem) {
             imageItem.src = product.image;
@@ -375,7 +387,7 @@ function initStore(products) {
         }
 
         if (itemPrice) {
-            itemPrice.textContent = `$${product.price}`;
+            itemPrice.textContent = product.price;
         }
 
         if (itemToggleFavorite) {

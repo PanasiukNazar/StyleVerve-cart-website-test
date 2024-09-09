@@ -85,83 +85,21 @@
                                         ><i
                                             class="fa fa-heart-o"
                                             aria-hidden="true"
-                                        ></i
+                                        ></i>
+                                        <span
+                                            data-store-el="favoriteProductsCounter"
+                                            class="total-count"
+                                        ></span
                                     ></a>
                                 </div>
                                 <div class="sinlge-bar shopping">
-                                    <a href="#" class="single-icon"
+                                    <a href="cart.html" class="single-icon"
                                         ><i class="ti-bag"></i>
-                                        <span class="total-count">2</span></a
-                                    >
-                                    <!-- Shopping Item -->
-                                    <div class="shopping-item">
-                                        <div class="dropdown-cart-header">
-                                            <span>2 Items</span>
-                                            <a href="#">View Cart</a>
-                                        </div>
-                                        <ul class="shopping-list">
-                                            <li>
-                                                <a
-                                                    href="#"
-                                                    class="remove"
-                                                    title="Remove this item"
-                                                    ><i class="fa fa-remove"></i
-                                                ></a>
-                                                <a class="cart-img" href="#"
-                                                    ><img
-                                                        src="https://via.placeholder.com/70x70"
-                                                        alt="#"
-                                                /></a>
-                                                <h4>
-                                                    <a href="#">Woman Ring</a>
-                                                </h4>
-                                                <p class="quantity">
-                                                    1x -
-                                                    <span class="amount"
-                                                        >$99.00</span
-                                                    >
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#"
-                                                    class="remove"
-                                                    title="Remove this item"
-                                                    ><i class="fa fa-remove"></i
-                                                ></a>
-                                                <a class="cart-img" href="#"
-                                                    ><img
-                                                        src="https://via.placeholder.com/70x70"
-                                                        alt="#"
-                                                /></a>
-                                                <h4>
-                                                    <a href="#"
-                                                        >Woman Necklace</a
-                                                    >
-                                                </h4>
-                                                <p class="quantity">
-                                                    1x -
-                                                    <span class="amount"
-                                                        >$35.00</span
-                                                    >
-                                                </p>
-                                            </li>
-                                        </ul>
-                                        <div class="bottom">
-                                            <div class="total">
-                                                <span>Total</span>
-                                                <span class="total-amount"
-                                                    >$134.00</span
-                                                >
-                                            </div>
-                                            <a
-                                                href="checkout.html"
-                                                class="btn animate"
-                                                >Checkout</a
-                                            >
-                                        </div>
-                                    </div>
-                                    <!--/ End Shopping Item -->
+                                        <span
+                                            class="total-count"
+                                            data-store-el="cartItemsCounter"
+                                        ></span
+                                    ></a>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +225,14 @@
                                     role="tabpanel"
                                 >
                                     <div class="tab-single">
-                                        <div class="row">
+                                        <div
+                                            class="row"
+                                            data-store-el="catalogItems"
+                                        ></div>
+
+                                        <template
+                                            data-store-el="catalogItemTemplate"
+                                        >
                                             <div
                                                 class="col-xl-3 col-lg-4 col-md-4 col-12"
                                             >
@@ -298,12 +243,12 @@
                                                         >
                                                             <img
                                                                 class="default-img"
-                                                                src="https://via.placeholder.com/550x750"
+                                                                data-store-el="itemImage"
                                                                 alt="#"
                                                             />
                                                             <img
                                                                 class="hover-img"
-                                                                src="https://via.placeholder.com/550x750"
+                                                                data-store-el="itemImage"
                                                                 alt="#"
                                                             />
                                                         </a>
@@ -317,7 +262,6 @@
                                                                     data-toggle="modal"
                                                                     data-target="#exampleModal"
                                                                     title="Quick View"
-                                                                    href="#"
                                                                     ><i
                                                                         class="ti-eye"
                                                                     ></i
@@ -328,8 +272,8 @@
                                                                 >
                                                                 <a
                                                                     title="Wishlist"
-                                                                    href="#"
                                                                     ><i
+                                                                        data-store-el="itemToggleFavorite"
                                                                         class="ti-heart"
                                                                     ></i
                                                                     ><span
@@ -343,7 +287,7 @@
                                                             >
                                                                 <a
                                                                     title="Add to cart"
-                                                                    href="#"
+                                                                    data-store-el="itemAddToCart"
                                                                     >Add to
                                                                     cart</a
                                                                 >
@@ -356,342 +300,20 @@
                                                         <h3>
                                                             <a
                                                                 href="product-details.html"
-                                                                >Women Hot
-                                                                Collection</a
-                                                            >
+                                                                data-store-el="itemTitle"
+                                                            ></a>
                                                         </h3>
                                                         <div
                                                             class="product-price"
                                                         >
-                                                            <span>$29.00</span>
+                                                            <span
+                                                                data-store-el="itemPrice"
+                                                            ></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div
-                                                class="col-xl-3 col-lg-4 col-md-4 col-12"
-                                            >
-                                                <div class="single-product">
-                                                    <div class="product-img">
-                                                        <a
-                                                            href="product-details.html"
-                                                        >
-                                                            <img
-                                                                class="default-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                            <img
-                                                                class="hover-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                        </a>
-                                                        <div
-                                                            class="button-head"
-                                                        >
-                                                            <div
-                                                                class="product-action"
-                                                            >
-                                                                <a
-                                                                    data-toggle="modal"
-                                                                    data-target="#exampleModal"
-                                                                    title="Quick View"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-eye"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Quick
-                                                                        Shop</span
-                                                                    ></a
-                                                                >
-                                                                <a
-                                                                    title="Wishlist"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-heart"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Add to
-                                                                        Wishlist</span
-                                                                    ></a
-                                                                >
-                                                            </div>
-                                                            <div
-                                                                class="product-action-2"
-                                                            >
-                                                                <a
-                                                                    title="Add to cart"
-                                                                    href="#"
-                                                                    >Add to
-                                                                    cart</a
-                                                                >
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="product-content"
-                                                    >
-                                                        <h3>
-                                                            <a
-                                                                href="product-details.html"
-                                                                >Awesome Pink
-                                                                Show</a
-                                                            >
-                                                        </h3>
-                                                        <div
-                                                            class="product-price"
-                                                        >
-                                                            <span>$29.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="col-xl-3 col-lg-4 col-md-4 col-12"
-                                            >
-                                                <div class="single-product">
-                                                    <div class="product-img">
-                                                        <a
-                                                            href="product-details.html"
-                                                        >
-                                                            <img
-                                                                class="default-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                            <img
-                                                                class="hover-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                        </a>
-                                                        <div
-                                                            class="button-head"
-                                                        >
-                                                            <div
-                                                                class="product-action"
-                                                            >
-                                                                <a
-                                                                    data-toggle="modal"
-                                                                    data-target="#exampleModal"
-                                                                    title="Quick View"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-eye"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Quick
-                                                                        Shop</span
-                                                                    ></a
-                                                                >
-                                                                <a
-                                                                    title="Wishlist"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-heart"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Add to
-                                                                        Wishlist</span
-                                                                    ></a
-                                                                >
-                                                            </div>
-                                                            <div
-                                                                class="product-action-2"
-                                                            >
-                                                                <a
-                                                                    title="Add to cart"
-                                                                    href="#"
-                                                                    >Add to
-                                                                    cart</a
-                                                                >
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="product-content"
-                                                    >
-                                                        <h3>
-                                                            <a
-                                                                href="product-details.html"
-                                                                >Awesome Bags
-                                                                Collection</a
-                                                            >
-                                                        </h3>
-                                                        <div
-                                                            class="product-price"
-                                                        >
-                                                            <span>$29.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="col-xl-3 col-lg-4 col-md-4 col-12"
-                                            >
-                                                <div class="single-product">
-                                                    <div class="product-img">
-                                                        <a
-                                                            href="product-details.html"
-                                                        >
-                                                            <img
-                                                                class="default-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                            <img
-                                                                class="hover-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                            <span class="new"
-                                                                >New</span
-                                                            >
-                                                        </a>
-                                                        <div
-                                                            class="button-head"
-                                                        >
-                                                            <div
-                                                                class="product-action"
-                                                            >
-                                                                <a
-                                                                    data-toggle="modal"
-                                                                    data-target="#exampleModal"
-                                                                    title="Quick View"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-eye"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Quick
-                                                                        Shop</span
-                                                                    ></a
-                                                                >
-                                                                <a
-                                                                    title="Wishlist"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-heart"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Add to
-                                                                        Wishlist</span
-                                                                    ></a
-                                                                >
-                                                            </div>
-                                                            <div
-                                                                class="product-action-2"
-                                                            >
-                                                                <a
-                                                                    title="Add to cart"
-                                                                    href="#"
-                                                                    >Add to
-                                                                    cart</a
-                                                                >
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="product-content"
-                                                    >
-                                                        <h3>
-                                                            <a
-                                                                href="product-details.html"
-                                                                >Women Pant
-                                                                Collectons</a
-                                                            >
-                                                        </h3>
-                                                        <div
-                                                            class="product-price"
-                                                        >
-                                                            <span>$29.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                class="col-xl-3 col-lg-4 col-md-4 col-12"
-                                            >
-                                                <div class="single-product">
-                                                    <div class="product-img">
-                                                        <a
-                                                            href="product-details.html"
-                                                        >
-                                                            <img
-                                                                class="default-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                            <img
-                                                                class="hover-img"
-                                                                src="https://via.placeholder.com/550x750"
-                                                                alt="#"
-                                                            />
-                                                        </a>
-                                                        <div
-                                                            class="button-head"
-                                                        >
-                                                            <div
-                                                                class="product-action"
-                                                            >
-                                                                <a
-                                                                    data-toggle="modal"
-                                                                    data-target="#exampleModal"
-                                                                    title="Quick View"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-eye"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Quick
-                                                                        Shop</span
-                                                                    ></a
-                                                                >
-                                                                <a
-                                                                    title="Wishlist"
-                                                                    href="#"
-                                                                    ><i
-                                                                        class="ti-heart"
-                                                                    ></i
-                                                                    ><span
-                                                                        >Add to
-                                                                        Wishlist</span
-                                                                    ></a
-                                                                >
-                                                            </div>
-                                                            <div
-                                                                class="product-action-2"
-                                                            >
-                                                                <a
-                                                                    title="Add to cart"
-                                                                    href="#"
-                                                                    >Add to
-                                                                    cart</a
-                                                                >
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="product-content"
-                                                    >
-                                                        <h3>
-                                                            <a
-                                                                href="product-details.html"
-                                                                >Awesome Bags
-                                                                Collection</a
-                                                            >
-                                                        </h3>
-                                                        <div
-                                                            class="product-price"
-                                                        >
-                                                            <span>$29.00</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </template>
                                     </div>
                                 </div>
                                 <!--/ End Single Tab -->
@@ -735,5 +357,8 @@
         <script src="js/easing.js"></script>
         <!-- Active JS -->
         <script src="js/active.js"></script>
+
+        <script src="js/store.js"></script>
+        <script src="products.js"></script>
     </body>
 </html>
